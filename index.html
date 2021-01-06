@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <title>AH!</title>
+</head>
+<body>
+    <header>
+        <div id="header" class="logo"><h1>AH!</h1></div>
+        <div class="cart">
+            <a href="#cartpopup"><i class="fas fa-shopping-cart"></i></a>
+    </header>
+    <main>
+        <div id="sidebar">
+            <div>
+                <input type="checkbox" name="checkbox" id="sidebar_fumari" checked>
+                <label for="sidebar_fumari">Fumari</label>
+            </div>
+            <div>
+                <input type="checkbox" name="checkbox" id="sidebar_darkside" checked>
+                <label for="sidebar_darkside">Darkside</label>
+            </div>   
+            <div>
+                <input type="checkbox" name="checkbox" id="sidebar_daily" checked>
+                <label for="sidebar_daily">Daily</label>
+            </div>   
+            <div>
+                <input type="checkbox" name="checkbox" id="sidebar_brusko" checked>
+                <label for="sidebar_brusko">Brusko</label>
+            </div>
+            <div>
+                <input type="checkbox" name="checkbox" id="sidebar_element" checked>
+                <label for="sidebar_element">Element</label>
+            </div>
+        </div>
+        <div class="showcase">
+            <div id="1" class="showcase__position fumari">
+                <div class="details">
+                    <p>Фирма: Fumari</p>
+                    <p>Кол-во грамм: 100</p>
+                    <p>Крепость: Легкий</p>
+                    <p>Жаростойкость: Высокая</p>
+                    <p>Страна: США</p>
+                    <div class="showcase__buy">
+                        <button class="showcase__minus fas fa-minus" onclick="this.nextElementSibling.stepDown();"></button>
+                        <input class="showcase__input" type="number" min="1" max="10" value="1">
+                        <button class="showcase__plus fas fa-plus" onclick="this.previousElementSibling.stepUp();"></button>
+                        <button class="showcase__cart fas fa-cart-plus" onclick="addToCart(this.parentElement.parentElement.parentElement.id)"></button>
+                    </div>
+                </div>
+                <img class="showcase__image" src="images/1.jpg" alt="">
+                <p class="showcase__name">Fumari - Cherry</p>
+                <p class="">Цена: <span class="price">229</span> грн.</p>
+                <!--Для лейбла-->
+                <div class="label-discount"></div>
+            </div>
+            <div id="2" class="showcase__position fumari">
+                <div class="details">
+                    <p>Фирма: Fumari</p>
+                    <p>Кол-во грамм: 100</p>
+                    <p>Крепость: Легкий</p>
+                    <p>Жаростойкость: Высокая </p>
+                    <p>Страна: США</p>
+                    <div class="showcase__buy">
+                        <button class="showcase__minus fas fa-minus" onclick="this.nextElementSibling.stepDown();"></button>
+                        <input class="showcase__input" type="number" min="1" max="10" value="1">
+                        <button class="showcase__plus fas fa-plus" onclick="this.previousElementSibling.stepUp();"></button>
+                        <button class="showcase__cart fas fa-cart-plus" onclick="addToCart(this.parentElement.parentElement.parentElement.id)"></button>
+                    </div>
+                </div>
+                <img class="showcase__image" src="images/2.jpg" alt="">
+                <p class="showcase__name">Fumari - Guava</p>
+                <p>Цена: <span class="price">229</span> грн.</p>
+                <div class=""></div>
+            </div>
+            <div id="3" class="showcase__position fumari">
+                <div class="details">
+                    <p>Фирма: Fumari</p>
+                    <p>Кол-во грамм: 100</p>
+                    <p>Крепость: </p>
+                    <p>Жаростойкость: Высокая </p>
+                    <p>Страна: США</p>
+                    <div class="showcase__buy">
+                        <button class="showcase__minus fas fa-minus" onclick="this.nextElementSibling.stepDown();"></button>
+                        <input class="showcase__input" type="number" min="1" max="10" value="1">
+                        <button class="showcase__plus fas fa-plus" onclick="this.previousElementSibling.stepUp();"></button>
+                        <button class="showcase__cart fas fa-cart-plus" onclick="addToCart(this.parentElement.parentElement.parentElement.id)"></button>
+                    </div>
+                </div>
+                <img class="showcase__image" src="images/3.jpg" alt="">
+                <p class="showcase__name">Fumari - Pina Colada</p>
+                <p>Цена: <span class="price">229</span> грн.</p>
+                <div class="label-less"></div>
+            </div>
+            <div id="4" class="showcase__position fumari">
+                <div class="details">
+                    <p>Фирма: Fumari</p>
+                    <p>Кол-во грамм: 100</p>
+                    <p>Крепость: Легкий</p>
+                    <p>Жаростойкость: Высокая </p>
+                    <p>Страна: США</p>
+                    <div class="showcase__buy">
+                        <button class="showcase__minus fas fa-minus" onclick="this.nextElementSibling.stepDown();"></button>
+                        <input class="showcase__input" type="number" min="1" max="10" value="1">
+                        <button class="showcase__plus fas fa-plus" onclick="this.previousElementSibling.stepUp();"></button>
+                        <button class="showcase__cart fas fa-cart-plus" onclick="addToCart(this.parentElement.parentElement.parentElement.id)"></button>
+                    </div>
+                </div>
+                <img class="showcase__image" src="images/4.jpg" alt="">
+                <p class="showcase__name">Fumari - Mint Chocolate</p>
+                <p>Цена: <span class="price">229</span> грн.</p>
+                <div class=""></div>
+            </div>
+            <div id="5" class="showcase__position fumari">
+                <div class="details">
+                    <p>Фирма: Fumari</p>
+                    <p>Кол-во грамм: 100</p>
+                    <p>Крепость: Легкий </p>
+                    <p>Жаростойкость: Высокая </p>
+                    <p>Страна: США</p>
+                    <div class="showcase__buy">
+                        <button class="showcase__minus fas fa-minus" onclick="this.nextElementSibling.stepDown();"></button>
+                        <input class="showcase__input" type="number" min="1" max="10" value="1">
+                        <button class="showcase__plus fas fa-plus" onclick="this.previousElementSibling.stepUp();"></button>
+                        <button class="showcase__cart fas fa-cart-plus" onclick="addToCart(this.parentElement.parentElement.parentElement.id)"></button>
+                    </div>
+                </div>
+                <img class="showcase__image" src="images/5.png" alt="">
+                <p class="showcase__name">Fumari - Mint IceCream</p>
+                <p>Цена: <span class="price">229</span> грн.</p>
+                <div class="label-discount"></div>
+            </div>
+            <div id="6" class="showcase__position brusko">
+                <div class="details">
+                    <p>Фирма: Brusko</p>
+                    <p>Кол-во грамм: 50</p>
+                    <p>Крепость: Легкий, Средний</p>
+                    <p>Жаростойкость: Средняя </p>
+                    <p>Страна: Россия</p>
+                    <div class="showcase__buy">
+                        <button class="showcase__minus fas fa-minus" onclick="this.nextElementSibling.stepDown();"></button>
+                        <input class="showcase__input" type="number" min="1" max="10" value="1">
+                        <button class="showcase__plus fas fa-plus" onclick="this.previousElementSibling.stepUp();"></button>
+                        <button class="showcase__cart fas fa-cart-plus" onclick="addToCart(this.parentElement.parentElement.parentElement.id)"></button>
+                    </div>
+                </div>
+                <img class="showcase__image" src="images/6.jpg" alt="">
+                <p class="showcase__name">Brusko - Capuchino</p>
+                <p>Цена: <span class="price">129</span> грн.</p>
+                <div class=""></div>
+            </div>
+            <div id="7" class="showcase__position brusko">
+                <div class="details">
+                    <p>Фирма: Brusko</p>
+                    <p>Кол-во грамм: 50</p>
+                    <p>Крепость: Легкий, Средний</p>
+                    <p>Жаростойкость: Средняя </p>
+                    <p>Страна: Россия</p>
+                    <div class="showcase__buy">
+                        <button class="showcase__minus fas fa-minus" onclick="this.nextElementSibling.stepDown();"></button>
+                        <input class="showcase__input" type="number" min="1" max="10" value="1">
+                        <button class="showcase__plus fas fa-plus" onclick="this.previousElementSibling.stepUp();"></button>
+                        <button class="showcase__cart fas fa-cart-plus" onclick="addToCart(this.parentElement.parentElement.parentElement.id)"></button>
+                    </div>
+                </div>
+                <img class="showcase__image" src="images/7.jpg" alt="">
+                <p class="showcase__name">Brusko - Ice</p>
+                <p>Цена: <span class="price">129</span> грн.</p>
+                <div class="label-hit"></div>
+            </div>
+            <div id="8" class="showcase__position brusko">
+                <div class="details">
+                    <p>Фирма: Brusko</p>
+                    <p>Кол-во грамм: 50</p>
+                    <p>Крепость: Легкий, Средний</p>
+                    <p>Жаростойкость: Средняя </p>
+                    <p>Страна: Россия</p>
+                    <div class="showcase__buy">
+                        <button class="showcase__minus fas fa-minus" onclick="this.nextElementSibling.stepDown();"></button>
+                        <input class="showcase__input" type="number" min="1" max="10" value="1">
+                        <button class="showcase__plus fas fa-plus" onclick="this.previousElementSibling.stepUp();"></button>
+                        <button class="showcase__cart fas fa-cart-plus" onclick="addToCart(this.parentElement.parentElement.parentElement.id)"></button>
+                    </div>
+                </div>
+                <img class="showcase__image" src="images/8.jpg" alt="">
+                <p class="showcase__name">Brusko - Mint Chocolate</p>
+                <p>Цена: <span class="price">129</span> грн.</p>
+                <div class=""></div>
+            </div>
+            <div id="9" class="showcase__position brusko">
+                <div class="details">
+                    <p>Фирма: Brusko</p>
+                    <p>Кол-во грамм: 50</p>
+                    <p>Крепость: Легкий, Средний</p>
+                    <p>Жаростойкость: Средняя </p>
+                    <p>Страна: Россия</p>
+                    <div class="showcase__buy">
+                        <button class="showcase__minus fas fa-minus" onclick="this.nextElementSibling.stepDown();"></button>
+                        <input class="showcase__input" type="number" min="1" max="10" value="1">
+                        <button class="showcase__plus fas fa-plus" onclick="this.previousElementSibling.stepUp();"></button>
+                        <button class="showcase__cart fas fa-cart-plus" onclick="addToCart(this.parentElement.parentElement.parentElement.id)"></button>
+                    </div>
+                </div>
+                <img class="showcase__image" src="images/9.jpg" alt="">
+                <p class="showcase__name">Brusko - Cookies</p>
+                <p>Цена: <span class="price">129</span> грн.</p>
+                <div class=""></div>
+            </div>
+            <div id="10" class="showcase__position brusko">
+                <div class="details">
+                    <p>Фирма: Brusko</p>
+                    <p>Кол-во грамм: 50</p>
+                    <p>Крепость:Легкий, Cредний </p>
+                    <p>Жаростойкость: Средняя </p>
+                    <p>Страна: Россия</p>
+                    <div class="showcase__buy">
+                        <button class="showcase__minus fas fa-minus" onclick="this.nextElementSibling.stepDown();"></button>
+                        <input class="showcase__input" type="number" min="1" max="10" value="1">
+                        <button class="showcase__plus fas fa-plus" onclick="this.previousElementSibling.stepUp();"></button>
+                        <button class="showcase__cart fas fa-cart-plus" onclick="addToCart(this.parentElement.parentElement.parentElement.id)"></button>
+                    </div>
+                </div>
+                <img class="showcase__image" src="images/10.jpg" alt="">
+                <p class="showcase__name">Brusko - Cactus</p>
+                <p>Цена: <span class="price">129</span> грн.</p>
+                <div class=""></div>
+            </div>
+            <div id="11" class="showcase__position brusko">
+                <div class="details">
+                    <p>Фирма: Brusko</p>
+                    <p>Кол-во грамм: 50</p>
+                    <p>Крепость: Легкий</p>
+                    <p>Жаростойкость: Средняя </p>
+                    <p>Страна: Россия</p>
+                    <div class="showcase__buy">
+                        <button class="showcase__minus fas fa-minus" onclick="this.nextElementSibling.stepDown();"></button>
+                        <input class="showcase__input" type="number" min="1" max="10" value="1">
+                        <button class="showcase__plus fas fa-plus" onclick="this.previousElementSibling.stepUp();"></button>
+                        <button class="showcase__cart fas fa-cart-plus" onclick="addToCart(this.parentElement.parentElement.parentElement.id)"></button>
+                    </div>
+                </div>
+                <img class="showcase__image" src="images/11.jpg" alt="">
+                <p class="showcase__name">Brusko - Cheesecake</p>
+                <p>Цена: <span class="price">129</span> грн.</p>
+                <div class="label-less"></div>
+            </div>
+	     <div id="12" class="showcase__position darkside">
+                <div class="details">
+                    <p>Фирма: Darkside</p>
+                    <p>Кол-во грамм: 100</p>
+                    <p>Крепость: Высокая</p>
+                    <p>Жаростойкость: Высокая</p>
+                    <p>Страна: Россия</p>
+                    <div class="showcase__buy">
+                        <button class="showcase__minus fas fa-minus" onclick="this.nextElementSibling.stepDown();"></button>
+                        <input class="showcase__input" type="number" min="1" max="10" value="1">
+                        <button class="showcase__plus fas fa-plus" onclick="this.previousElementSibling.stepUp();"></button>
+                        <button class="showcase__cart fas fa-cart-plus" onclick="addToCart(this.parentElement.parentElement.parentElement.id)"></button>
+                    </div>
+                </div>
+                <img class="showcase__image" src="images/12.jpg" alt="">
+                <p class="showcase__name">Darkside - BananaPapa</p>
+                <p class="">Цена: <span class="price">449</span> грн.</p>
+                <!--Для лейбла-->
+                <div class=" "></div>
+            </div>
+            <div id="13" class="showcase__position darkside">
+                <div class="details">
+                    <p>Фирма: Darkside</p>
+                    <p>Кол-во грамм: 100</p>
+                    <p>Крепость: Высокая</p>
+                    <p>Жаростойкость: Высокая</p>
+                    <p>Страна: Россия</p>
+                    <div class="showcase__buy">
+                        <button class="showcase__minus fas fa-minus" onclick="this.nextElementSibling.stepDown();"></button>
+                        <input class="showcase__input" type="number" min="1" max="10" value="1">
+                        <button class="showcase__plus fas fa-plus" onclick="this.previousElementSibling.stepUp();"></button>
+                        <button class="showcase__cart fas fa-cart-plus" onclick="addToCart(this.parentElement.parentElement.parentElement.id)"></button>
+                    </div>
+                </div>
+                <img class="showcase__image" src="images/13.jpg" alt="">
+                <p class="showcase__name">Darkside - Applecot</p>
+                <p class="">Цена: <span class="price">449</span> грн.</p>
+                <!--Для лейбла-->
+                <div class="label-discount"></div>
+            </div>
+	    <div id="14" class="showcase__position darkside">
+                <div class="details">
+                    <p>Фирма: Darkside</p>
+                    <p>Кол-во грамм: 100</p>
+                    <p>Крепость: Высокая</p>
+                    <p>Жаростойкость: Высокая</p>
+                    <p>Страна: Россия</p>
+                    <div class="showcase__buy">
+                        <button class="showcase__minus fas fa-minus" onclick="this.nextElementSibling.stepDown();"></button>
+                        <input class="showcase__input" type="number" min="1" max="10" value="1">
+                        <button class="showcase__plus fas fa-plus" onclick="this.previousElementSibling.stepUp();"></button>
+                        <button class="showcase__cart fas fa-cart-plus" onclick="addToCart(this.parentElement.parentElement.parentElement.id)"></button>
+                    </div>
+                </div>
+                <img class="showcase__image" src="images/14.jpg" alt="">
+                <p class="showcase__name">Darkside - Barvy Citrus</p>
+                <p class="">Цена: <span class="price">449</span> грн.</p>
+                <!--Для лейбла-->
+                <div class=""></div>
+            </div>
+	    <div id="15" class="showcase__position darkside">
+                <div class="details">
+                    <p>Фирма: Darkside</p>
+                    <p>Кол-во грамм: 100</p>
+                    <p>Крепость: Высокая</p>
+                    <p>Жаростойкость: Высокая</p>
+                    <p>Страна: Россия</p>
+                    <div class="showcase__buy">
+                        <button class="showcase__minus fas fa-minus" onclick="this.nextElementSibling.stepDown();"></button>
+                        <input class="showcase__input" type="number" min="1" max="10" value="1">
+                        <button class="showcase__plus fas fa-plus" onclick="this.previousElementSibling.stepUp();"></button>
+                        <button class="showcase__cart fas fa-cart-plus" onclick="addToCart(this.parentElement.parentElement.parentElement.id)"></button>
+                    </div>
+                </div>
+                <img class="showcase__image" src="images/15.jpg" alt="">
+                <p class="showcase__name">Darkside - Generis Raspberry</p>
+                <p class="">Цена: <span class="price">449</span> грн.</p>
+                <!--Для лейбла-->
+                <div class=""></div>
+            </div>
+            <div id="16" class="showcase__position darkside">
+                <div class="details">
+                    <p>Фирма: Darkside</p>
+                    <p>Кол-во грамм: 100</p>
+                    <p>Крепость: Высокая</p>
+                    <p>Жаростойкость: Высокая</p>
+                    <p>Страна: Россия</p>
+                    <div class="showcase__buy">
+                        <button class="showcase__minus fas fa-minus" onclick="this.nextElementSibling.stepDown();"></button>
+                        <input class="showcase__input" type="number" min="1" max="10" value="1">
+                        <button class="showcase__plus fas fa-plus" onclick="this.previousElementSibling.stepUp();"></button>
+                        <button class="showcase__cart fas fa-cart-plus" onclick="addToCart(this.parentElement.parentElement.parentElement.id)"></button>
+                    </div>
+                </div>
+                <img class="showcase__image" src="images/16.jpg" alt="">
+                <p class="showcase__name">Darkside - BlackCurant</p>
+                <p class="">Цена: <span class="price">449</span> грн.</p>
+                <!--Для лейбла-->
+                <div class=""></div>
+            </div>
+            <div id="17" class="showcase__position darkside">
+                <div class="details">
+                    <p>Фирма: Darkside</p>
+                    <p>Кол-во грамм: 100</p>
+                    <p>Крепость: Высокая</p>
+                    <p>Жаростойкость: Высокая</p>
+                    <p>Страна: Россия</p>
+                    <div class="showcase__buy">
+                        <button class="showcase__minus fas fa-minus" onclick="this.nextElementSibling.stepDown();"></button>
+                        <input class="showcase__input" type="number" min="1" max="10" value="1">
+                        <button class="showcase__plus fas fa-plus" onclick="this.previousElementSibling.stepUp();"></button>
+                        <button class="showcase__cart fas fa-cart-plus" onclick="addToCart(this.parentElement.parentElement.parentElement.id)"></button>
+                    </div>
+                </div>
+                <img class="showcase__image" src="images/17.jpg" alt="">
+                <p class="showcase__name">Darkside - Blueberry Blast</p>
+                <p class="">Цена: <span class="price">449</span> грн.</p>
+                <!--Для лейбла-->
+                <div class=""></div>
+            </div>
+            <div id="18" class="showcase__position darkside">
+                <div class="details">
+                    <p>Фирма: Darkside</p>
+                    <p>Кол-во грамм: 100</p>
+                    <p>Крепость: Высокая</p>
+                    <p>Жаростойкость: Высокая</p>
+                    <p>Страна: Россия</p>
+                    <div class="showcase__buy">
+                        <button class="showcase__minus fas fa-minus" onclick="this.nextElementSibling.stepDown();"></button>
+                        <input class="showcase__input" type="number" min="1" max="10" value="1">
+                        <button class="showcase__plus fas fa-plus" onclick="this.previousElementSibling.stepUp();"></button>
+                        <button class="showcase__cart fas fa-cart-plus" onclick="addToCart(this.parentElement.parentElement.parentElement.id)"></button>
+                    </div>
+                </div>
+                <img class="showcase__image" src="images/18.jpg" alt="">
+                <p class="showcase__name">Darkside - Cinnamon</p>
+                <p class="">Цена: <span class="price">449</span> грн.</p>
+                <!--Для лейбла-->
+                <div class=""></div>
+            </div>
+            <div id="19" class="showcase__position daily">
+                <div class="details">
+                    <p>Фирма: Daily Hookah</p>
+                    <p>Кол-во грамм: 60</p>
+                    <p>Крепость: Легкая</p>
+                    <p>Жаростойкость: Высокая</p>
+                    <p>Страна: Россия</p>
+                    <div class="showcase__buy">
+                        <button class="showcase__minus fas fa-minus" onclick="this.nextElementSibling.stepDown();"></button>
+                        <input class="showcase__input" type="number" min="1" max="10" value="1">
+                        <button class="showcase__plus fas fa-plus" onclick="this.previousElementSibling.stepUp();"></button>
+                        <button class="showcase__cart fas fa-cart-plus" onclick="addToCart(this.parentElement.parentElement.parentElement.id)"></button>
+                    </div>
+                </div>
+                <img class="showcase__image" src="images/19.jpg" alt="">
+                <p class="showcase__name">Daily Hookah - Банан</p>
+                <p class="">Цена: <span class="price">185</span> грн.</p>
+                <!--Для лейбла-->
+                <div class=""></div>
+            </div>
+            <div id="20" class="showcase__position daily">
+                <div class="details">
+                    <p>Фирма: Daily Hookah</p>
+                    <p>Кол-во грамм: 60</p>
+                    <p>Крепость: Легкая</p>
+                    <p>Жаростойкость: Высокая</p>
+                    <p>Страна: Россия</p>
+                    <div class="showcase__buy">
+                        <button class="showcase__minus fas fa-minus" onclick="this.nextElementSibling.stepDown();"></button>
+                        <input class="showcase__input" type="number" min="1" max="10" value="1">
+                        <button class="showcase__plus fas fa-plus" onclick="this.previousElementSibling.stepUp();"></button>
+                        <button class="showcase__cart fas fa-cart-plus" onclick="addToCart(this.parentElement.parentElement.parentElement.id)"></button>
+                    </div>
+                </div>
+                <img class="showcase__image" src="images/20.jpg" alt="">
+                <p class="showcase__name">Daily Hookah - Лимоний</p>
+                <p class="">Цена: <span class="price">185</span> грн.</p>
+                <!--Для лейбла-->
+                <div class=""></div>
+            </div>
+            <div id="21" class="showcase__position daily">
+                <div class="details">
+                    <p>Фирма: Daily Hookah</p>
+                    <p>Кол-во грамм: 100</p>
+                    <p>Крепость: Легкая</p>
+                    <p>Жаростойкость: Высокая</p>
+                    <p>Страна: Россия</p>
+                    <div class="showcase__buy">
+                        <button class="showcase__minus fas fa-minus" onclick="this.nextElementSibling.stepDown();"></button>
+                        <input class="showcase__input" type="number" min="1" max="10" value="1">
+                        <button class="showcase__plus fas fa-plus" onclick="this.previousElementSibling.stepUp();"></button>
+                        <button class="showcase__cart fas fa-cart-plus" onclick="addToCart(this.parentElement.parentElement.parentElement.id)"></button>
+                    </div>
+                </div>
+                <img class="showcase__image" src="images/21.jpg" alt="">
+                <p class="showcase__name">Daily Hookah - Клубничный Мильфей</p>
+                <p class="">Цена: <span class="price">185</span> грн.</p>
+                <!--Для лейбла-->
+                <div class=""></div>
+            </div>
+            <div id="22" class="showcase__position daily">
+                <div class="details">
+                    <p>Фирма: Daily Hookah</p>
+                    <p>Кол-во грамм: 100</p>
+                    <p>Крепость: Легкая</p>
+                    <p>Жаростойкость: Высокая</p>
+                    <p>Страна: Россия</p>
+                    <div class="showcase__buy">
+                        <button class="showcase__minus fas fa-minus" onclick="this.nextElementSibling.stepDown();"></button>
+                        <input class="showcase__input" type="number" min="1" max="10" value="1">
+                        <button class="showcase__plus fas fa-plus" onclick="this.previousElementSibling.stepUp();"></button>
+                        <button class="showcase__cart fas fa-cart-plus" onclick="addToCart(this.parentElement.parentElement.parentElement.id)"></button>
+                    </div>
+                </div>
+                <img class="showcase__image" src="images/22.jpg" alt="">
+                <p class="showcase__name">Daily Hookah - Лимоний</p>
+                <p class="">Цена: <span class="price">185</span> грн.</p>
+                <!--Для лейбла-->
+                <div class=""></div>
+            </div>
+            <div id="23" class="showcase__position daily">
+                <div class="details">
+                    <p>Фирма: Daily Hookah</p>
+                    <p>Кол-во грамм: 100</p>
+                    <p>Крепость: Легкая</p>
+                    <p>Жаростойкость: Высокая</p>
+                    <p>Страна: Россия</p>
+                    <div class="showcase__buy">
+                        <button class="showcase__minus fas fa-minus" onclick="this.nextElementSibling.stepDown();"></button>
+                        <input class="showcase__input" type="number" min="1" max="10" value="1">
+                        <button class="showcase__plus fas fa-plus" onclick="this.previousElementSibling.stepUp();"></button>
+                        <button class="showcase__cart fas fa-cart-plus" onclick="addToCart(this.parentElement.parentElement.parentElement.id)"></button>
+                    </div>
+                </div>
+                <img class="showcase__image" src="images/23.jpg" alt="">
+                <p class="showcase__name">Daily Hookah - Энергетический Напиток</p>
+                <p class="">Цена: <span class="price">185</span> грн.</p>
+                <!--Для лейбла-->
+                <div class=""></div>
+            </div>
+            <div id="24" class="showcase__position daily">
+                <div class="details">
+                    <p>Фирма: Daily Hookah</p>
+                    <p>Кол-во грамм: 100</p>
+                    <p>Крепость: Легкая</p>
+                    <p>Жаростойкость: Высокая</p>
+                    <p>Страна: Россия</p>
+                    <div class="showcase__buy">
+                        <button class="showcase__minus fas fa-minus" onclick="this.nextElementSibling.stepDown();"></button>
+                        <input class="showcase__input" type="number" min="1" max="10" value="1">
+                        <button class="showcase__plus fas fa-plus" onclick="this.previousElementSibling.stepUp();"></button>
+                        <button class="showcase__cart fas fa-cart-plus" onclick="addToCart(this.parentElement.parentElement.parentElement.id)"></button>
+                    </div>
+                </div>
+               <img class="showcase__image" src="images/24.jpg" alt="">
+                <p class="showcase__name">Daily Hookah - Оранжина</p>
+                <p class="">Цена: <span class="price">185</span> грн.</p>
+                <!--Для лейбла-->
+                <div class=""></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer__socialmedia">
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://uk-ua.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://web.telegram.org/" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://www.viber.com/ru/" target="_blank"><i class="fab fa-viber"></i></a>
+            </div>
+        </div>
+    </footer>
+    <div id="cartpopup" class="cartpopup">
+        <div class="cartpopup__body">
+            <div class="cartpopup__content">
+                <a href="#header" class="cartpopup__close">X</a>
+                <div class="cartpopup__title">Корзина</div>
+                <div class="cartpopup__list">
+                    <table>
+                        <tr>
+                            <th>Название</th>
+                            <th>Цена</th>
+                            <th>Кол-во</th>
+                        </tr>
+                    </table>
+                </div>
+                <div id="cartpopup__total">Итого: <span>0</span> грн.</div>
+                <div id="cartpopup__send">
+                    <form action="">
+                        <input type="email" name="email" id="" placeholder="example@example.com">
+                        <button>Заказать</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
